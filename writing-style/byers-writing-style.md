@@ -16,7 +16,7 @@ Where Strunk and Brandon's habits conflict, Section 8 says which one wins.
 - **Role:** Postdoctoral researcher, Chair of Circular Engineering for Architecture (CEA), ETH Zurich (Prof. Catherine De Wolf).
 - **Path:** BS Civil Engineering, Georgia Tech (high honors, structural). MS Sustainable Design & Construction, Stanford. Structural engineer at AECOM, Washington DC, on dams and hydraulic structures, including emergency grouting at Mosul Dam. PhD, ETH Zurich, 2024: *Circular Construction Supply Chains: Implementing Decentralized Building Product Passports for Tracking and Tracing Reused Materials.*
 - **Research in one line:** "building informatics and distributed technologies for product tracking to facilitate a circular economy in construction."
-- **Recurring subjects:** circular economy in the built environment, building component reuse, material and digital product passports, tracking and tracing, decentralized data and self-sovereign identity, post-hazard infrastructure restoration, peer review and science policy, and more recently AI, agency, and property.
+- **Recurring subjects:** circular economy in the built environment, building component reuse, material and digital product passports, tracking and tracing, decentralized data and self-sovereign identity, post-hazard infrastructure restoration, and peer review and science policy. More recent subjects: AI and agency, property, and critical-materials and extraterrestrial construction (rare earths from secondary feedstocks, regolith reactivity, desert sands in cement).
 - **Profiles:** ORCID 0000-0002-8622-8529 · Google Scholar `7ksucksAAAAJ` · Medium `@bsquared215`.
 
 ---
@@ -148,6 +148,11 @@ Lead with a **Highlights** list, or open on a statistic. Map stakeholders explic
 - **Punctuation:** heavy use of colons, which introduce definitions and lists. Moderate semicolons. Italicize key terms on first use. Brackets for provisional names. Rhetorical questions organize sections; they are not filler.
 - **Sourcing:** inline links or mid-sentence author-year citations. Don't stack references at the end of a paragraph.
 
+- **Talking to the reader in the essays:** he raises the reader's objection and then turns on it. *"Yes, it has to do with extracting less virgin materials … but how is that a new idea?"* · *"Okay, these may be interesting for finance and distributed computing, but how does this impact AEC and our buildings?"* · *"If you're like me, then entropy is a word that you probably last learned about in a college or high school physics course."*
+- **One-line pivot paragraphs:** *"But this boom has a shadow side."* · *"This is the rub, part of the crux…"*
+- **Declaring the thesis in first person:** *"I have been synthesizing my ideas into a central thesis that a circular economy for the construction industry is, at its core, about mitigating entropy. There are three components to this:"* followed by a list.
+- **The long "Perhaps" cascade:** the ubiquitous-computing essay runs nine sentences beginning "Perhaps…" before the close. Use one cascade per piece at most.
+
 ### 6.6 Signature constructions
 - `not X, more so Y`: *"Circularity, or reuse, is not a design language, more so it acts as a design premise."*
 - `At its core, ___`: for thesis statements.
@@ -186,7 +191,12 @@ Run Strunk as the **editing pass** after drafting. Full rules are in `strunk-ele
 - Put a comma after a long introductory clause.
 - Subject-verb agreement across long intervening clauses: *"entropy and randomness **are** the default."*
 - Avoid "think [noun]" as an aside (*"think agricultural revolution"*). Write *"as in the agricultural revolution."*
-- Strunk on *factor, feature, nature, character, very, interesting*: cut or replace.
+- **"Interesting":** Strunk: *"Instead of announcing that what you are about to tell is interesting, make it so."* This is a real habit: *"An interesting paper from Roithner, et al"*, *"An interesting paper by Bauwens, et al."*, *"found interesting results"*, *"Interestingly enough"*. Name what the paper found instead.
+- **"Often times" / "Oftentimes":** Strunk calls these archaic; write *often*. (Used in *Mitigating Entropy* and *Future of Living*.)
+- **"different than"** → *different from* (Strunk). *"Embodied energy is different than the energy content…"*
+- **Homophones and slips found in the essays:** *tenets*, not *tenants*; *its own*, not *it's own*; *lay out* (verb), not *layout*; *slightly above*, not *slight above*; *it is lifting*, not *its lifting*.
+- *Data* is plural for Strunk. Pick one usage per piece and keep it.
+- Strunk on *factor, feature, nature, character, case, very*: cut or replace.
 
 ---
 
@@ -200,6 +210,7 @@ Run Strunk as the **editing pass** after drafting. Full rules are in `strunk-ele
 | Strunk: positive form. Brandon: `not X, more so Y` and `The question isn't A. It's B.` | **The reframe construction stays.** It is the voice. Limit it to once or twice per piece so it lands. |
 | Strunk: no comma splices. Brandon: `not X, more so Y`. | **The signature comma stays**; fix every other splice. |
 | Strunk (1918) was silent on em-dashes. Brandon's older corpus used them. | **Standing instruction: zero em-dashes.** |
+| Brandon's 2023–24 essays use occasional exclamation points (*"I highly recommend this great video as a refresher on entropy!"*). | **Standing instruction: none.** |
 
 ---
 
@@ -215,6 +226,17 @@ Run Strunk as the **editing pass** after drafting. Full rules are in `strunk-ele
 > "due to the exploratory and specific nature of these projects, the method is more internally rather than externally valid, and thus the results are not fully generalizable"
 
 > "These contributions in aggregate further facilitate reuse and the circular economy for the built environment."
+
+> "However, this potential for reuse is often hindered by a critical information gap between material life cycles." *(From Research to Practice, 2023)*
+
+> "Circular construction promotes the reuse of building components, yet a key challenge is to reliably link long-term information with physical products." *(Phygital identifiers, 2025)*
+
+> "Although lowering emissions is vital, focusing solely on CO₂ overlooks other greenhouse gases and broader resource constraints." *(CRC book chapter, 2025: concede, then widen the frame)*
+
+**The compact quantitative abstract (2026, newest form).** Tighter than the earlier abstracts: no anchor, every sentence carries a number or a mechanism, and the last sentence is a single clause on what the work enables.
+> "Global deposits for rare earth elements (REEs) remain concentrated in a limited number of geographic sources, exposing advanced energy and defense technologies to supply risk. Reclaiming REEs from secondary feedstocks offers a path to supply chain resilience, but no prior study has systematically characterized their technical and economic accessibility across feedstock types. Through a quantitative systematic review of 305 studies, this work applies an accessibility framework … By establishing a baseline for feedstock prioritization, this framework informs near-term reclamation investment and resource resilience strategies." *(Resource accessibility of rare earths, Chem Circularity 2026)*
+
+Use this form for short abstracts and grant summaries: problem with stakes → named gap ("no prior study has…") → method with its number → result as a contrast → one-clause payoff.
 
 ### Policy review: *Peer Review in a Pickle* (MIT Science Policy Review, Vol. IV, 2023, with Dougherty and Horo)
 > "While the universal proliferation of peer review has improved the quality control of academic work, increased pressures on peer review from modern science have exposed cracks in its current implementation."
@@ -261,8 +283,21 @@ Run Strunk as the **editing pass** after drafting. Full rules are in `strunk-ele
 
 *Note:* this piece carries the old moves (reframe, borrowed frame, coinage, So What) into philosophy and law. The Strunk pass in §7 matters most here; the draft has several comma splices, one split sentence, and lowercase proper adjectives.
 
-### Talk: Holcim Foundation Sounding Board, Zurich, 7 June 2023
-Title: *"Beyond Recycling: Why Reuse is Vital for Resilience and Regeneration."* The argument: reuse beats recycling on energy and time; catalogue buildings digitally *before* demolition through "upstream crowd-sourcing of data from our built environment"; reuse supports community resilience through "local participation and data democratization," in both steady-state development and post-hazard reconstruction. *(This summary comes from the Foundation's write-up. No transcript was available.)*
+### More essay lines (full Medium texts, 2023–2025)
+> "It's an easy thought experiment to visualize an abandoned home in your neighborhood, the paint chips and fades, the windows are broken in, the tiles are falling off… buildings decay over time, this is the entropy of materials."
+
+> "The cost of materials in construction is a function of the invested embodied energy, minus the potential end-of-life value, minus the inevitable entropy of energy along its entire life cycle."
+
+> "So how can we design and construct our buildings not just with structural redundancy, but with informational redundancy to mitigate the entropy of information into the future."
+
+> "This is the Sisyphean goal of the AEC industry: to produce a Single Source of Truth (SSOT)…"
+
+> "AI compresses the middle of the distribution of quality, creating massive premiums at the tails."
+
+> "There can be no unifying form as it follows availability and will be contextual to accessible materials."
+
+### Talk: Holcim Foundation Sounding Board, Zurich (presented 7 March 2023; video and write-up posted 7 June 2023)
+Title: *"Beyond Recycling: Why Reuse is Vital for Resilience and Regeneration."* A 10-minute pitch to peers, followed by an audience poll. The argument: reuse beats recycling because it saves re-processing time and energy, "both particularly critical resources in urban recovery." Catalogue buildings digitally *before* demolition. If we can "crowd source" and aggregate information about the built environment, materials can be reused more efficiently "as materials transition from one use to another within the building fabric." Reuse is therefore "a strategy for post-disaster resilience facilitated through local participation and data democratization." *(This comes from the Foundation's write-up. YouTube blocks transcript requests from cloud servers, so no spoken samples yet.)*
 
 ---
 
@@ -288,8 +323,37 @@ Title: *"Beyond Recycling: Why Reuse is Vital for Resilience and Regeneration."*
 
 ## Sources and gaps
 
-**Read for this document:** *Peer Review in a Pickle* (MIT SPR Vol. IV, final PDF in Brandon's Drive) · *When Scarcity Inverts* v7 (Drive draft) · the existing `byers-writing-style` skill's verbatim corpus (QR Code-Based Material Passports, JoCE 2023; Engraved QR codes, EC3 2022; Circular Economy for Post-Hazard Infrastructure Restoration, 2025; five Medium essays; The Academic, 2024; the Holcim Sounding Board write-up).
+**Read in full:** five Medium essays (`@bsquared215` feed: *Ubiquitous computers* 2023, *Future of Living* 2024, *Mitigating Entropy* 2024, *Aesthetics of Reuse* 2024, *Slopitect* 2025) · *Peer Review in a Pickle* (MIT SPR Vol. IV, 2023, final PDF from Drive) · *When Scarcity Inverts* v7 (Drive draft) · Holcim Foundation write-up · *The Elements of Style* (Gutenberg #37134).
 
-**Known, not read in full:** *D5 digital circular workflow* (npj Materials Sustainability, 2024) · *From Research to Practice* (SPC, 2023) · *Decentralized Data Networks for Lifecycle Management* (ITcon, 2025) · *A Steel Element Reuse Ontology* (DIBE, 2025) · *Data Carriers for Circular Construction Supply Chains* (JCP, 2025) · *Decentralized phygital identifier systems* (Construction Innovation, 2025).
+**Abstracts read** (all first-authored works, via ORCID 0000-0002-8622-8529 and OpenAlex), plus excerpts from earlier analysis of the full QR-code papers and the post-hazard paper.
 
-**Gaps:** No transcripts of spoken talks (Holcim 2023, EC3 2024, MSU CCED 2025 are on YouTube). No samples of email or short-form LinkedIn. Google Scholar, ORCID, and ResearchGate could not be fetched directly from this environment, so the publication list above is not exhaustive.
+**Publication list (ORCID + OpenAlex, 22 records; ★ = first author):**
+
+| Year | Title | Venue |
+|---|---|---|
+| 2026 | ★ Resource accessibility of rare earths across secondary feedstocks | Chem Circularity |
+| 2026 | Assessing the cementitious reactivity of lunar and Martian regolith simulants for extraterrestrial construction | npj Space Exploration |
+| 2026 | Effects of Desert Sands on the Fresh and Hardened Properties of Cement-Based Materials | J. Materials in Civil Engineering |
+| 2025 | ★ Self-Sovereign Identity of Things (SSIoT): Digital Identities for Circular Construction Supply Chains | conference paper |
+| 2025 | ★ Decentralized phygital identifier systems for digital passports in circular construction: a design science evaluation | Construction Innovation |
+| 2025 | ★ Assessing the User Experience of Extended Reality Devices for (Dis)Assembly: A Classroom Study | arXiv / conference |
+| 2025 | ★ Circular Economy Perspectives and Innovations for Decarbonizing the Construction Industry | CRC Press (chapter) |
+| 2025 | ★ Circular Economy for Post-Hazard Infrastructure Restoration: Strategies for Resilience and Resource Efficiency | Journal of Sustainability |
+| 2025 | ★ Data carriers for circular construction supply chains: An exploratory quantitative analysis | J. Cleaner Production |
+| 2025 | Decentralized Data Networks for Lifecycle Management in the Built Environment | ITcon |
+| 2025 | A steel element reuse ontology for building audits in circular construction | Developments in the Built Environment |
+| 2025 | Gamified Virtual Reality for Building Material Reuse Planning | conference paper |
+| 2024 | ★ Leveraging tech in maximising construction material reuse | The Academic |
+| 2024 | D5 digital circular workflow: five digital steps towards matchmaking for material reuse in construction | npj Materials Sustainability |
+| 2023 | ★ Peer review in a pickle: Policy approaches for academic peer review | MIT Science Policy Review |
+| 2023 | ★ From research to practice: A review on technologies for addressing the information gap for building material reuse | Sustainable Production and Consumption |
+| 2023 | ★ QR Code-Based Material Passports for Component Reuse Across Life Cycle Stages in Small-Scale Construction | Journal of Circular Economy |
+| 2023 | A global perspective on building material recovery incorporating the impact of regional factors | J. Cleaner Production |
+| 2022 | ★ Using engraved QR codes to connect building components to materials passports for circular construction | EC3 2022 |
+| 2022 | Whole life cycle environmental impact assessment of buildings: software tool and database for EU Level(s) | Resources, Conservation & Recycling |
+
+**Gaps:**
+- **Talks:** Holcim 2023, EC3 2024, and MSU CCED 2025 are on YouTube, but YouTube blocks transcript requests from cloud servers.
+- **Google Scholar and ResearchGate:** both return bot challenges (HTTP 429 and 403) even with network access open. ORCID and OpenAlex cover the same publication record.
+- **Other writing:** no samples of email or short-form LinkedIn.
+- **The Academic article:** the text comes from the earlier skill's corpus; it wasn't fetched again here.

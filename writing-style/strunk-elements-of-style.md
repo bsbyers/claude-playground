@@ -1,6 +1,6 @@
 # The Elements of Style (William Strunk Jr., 1918): Rules Reference
 
-Public-domain first edition (Ithaca, NY: privately printed, 1918; Project Gutenberg #37134). This file restates the rules as an editing reference for `byers-writing-style.md`. Where the original wording is short and well known it is quoted; otherwise the rule is paraphrased. **Note:** the full text could not be downloaded in the environment where this was compiled, so check the rules against the Gutenberg text if exact wording matters.
+Public-domain first edition (Ithaca, NY: privately printed, 1918; Project Gutenberg #37134). This file restates the rules as an editing reference for `byers-writing-style.md`. Rule headings are quoted exactly from the Gutenberg text; the explanations under them are condensed paraphrase, with direct quotes marked.
 
 ---
 
@@ -17,7 +17,7 @@ Public-domain first edition (Ithaca, NY: privately printed, 1918; Project Gutenb
 ## III. Elementary Principles of Composition
 
 8. **Make the paragraph the unit of composition: one paragraph to each topic.** Each new step in the argument gets its own paragraph.
-9. **As a rule, begin each paragraph with a topic sentence; end it in conformity with the beginning.** The reader should know from the first sentence what the paragraph is about.
+9. **As a rule, begin each paragraph with a topic sentence, end it in conformity with the beginning.** The reader should know from the first sentence what the paragraph is about.
 10. **Use the active voice.** "The active voice is usually more direct and vigorous than the passive." The passive is fine when the receiver of the action is the true subject.
 11. **Put statements in positive form.** Make definite assertions. Avoid tame, colorless, hesitating, noncommittal language. *"He usually came late"* rather than *"He was not very often on time."* Consciously or not, the reader is dissatisfied with being told only what is not.
 12. **Use definite, specific, concrete language.** Prefer the specific to the general, the definite to the vague, the concrete to the abstract. *"It rained every day for a week"* rather than *"A period of unfavorable weather set in."*
@@ -71,7 +71,8 @@ Public-domain first edition (Ithaca, NY: privately printed, 1918; Project Gutenb
 - **Fix.** Colloquial for *arrange, prepare, mend*.
 - **He is a man who.** Redundant.
 - **However.** In the sense *nevertheless*, not to come first in its sentence or clause.
-- **Interesting.** An unconvincing word; avoid it as a means of introduction. Make the thing interesting instead.
+- **Interesting.** "Avoid this word as a perfunctory means of introduction. Instead of announcing that what you are about to tell is interesting, make it so."
+- **Like.** "Not to be misused for *as*. *Like* governs nouns and pronouns; before phrases and clauses the equivalent word is *as*."
 - **Kind of / sort of.** Not to be used as a substitute for *rather* or *something like*.
 - **Less.** Should not be misused for *fewer*. *Less* refers to quantity; *fewer* to number.
 - **Line, along these lines.** Hackneyed; cut.
@@ -79,12 +80,14 @@ Public-domain first edition (Ithaca, NY: privately printed, 1918; Project Gutenb
 - **Most.** Not to be used for *almost*.
 - **Nature.** Often simply redundant, like *character*.
 - **Near by.** Adverbial phrase; not an adjective.
-- **One of the most.** Avoid beginning essays or paragraphs with this formula.
+- **Oftentimes, ofttimes.** "Archaic forms, no longer in good use. The modern word is *often*."
+- **One of the most.** Avoid beginning essays or paragraphs with this formula; "it is simply threadbare and forcible-feeble."
 - **People.** *People* is a political term; not to be confused with *the public*. Of large groups, *persons* for exact number.
 - **Phase.** Means a stage of transition; not a synonym for *aspect* or *topic*.
 - **Possess.** Not to be used as a mere substitute for *have* or *own*.
 - **Respective, respectively.** Usually omissible.
 - **So.** Avoid as an intensifier (*so good*).
+- **Split infinitive.** Strunk: "in disfavor and … avoided by nearly all careful writers." Modern usage allows it when moving the adverb would be clumsy.
 - **State.** Not a mere substitute for *say, remark*; restrict to *express fully or clearly*.
 - **Student body.** Needless; *the students*.
 - **System.** Frequently used without need.
@@ -97,5 +100,5 @@ Public-domain first edition (Ithaca, NY: privately printed, 1918; Project Gutenb
 - **Worth while.** Overworked as a term of vague approval.
 - **Would.** A conditional statement in the first person requires *should*, not *would* (a 1918 rule; treat as archaic).
 
-## VI. Words Commonly Misspelled (selection)
-accidentally · beginning · believe · challenge · criticize · deceive · definite · describe · despise · develop · disappoint · duel · ecstasy · effect · existence · fiery · formerly · humorous · hypocrisy · immediately · incidentally · latter · led · lose · marriage · mischief · murmur · necessary · occurred · parallel · Philip · playwright · preceding · prejudice · principal · privilege · pursue · repetition · rhyme · rhythm · ridiculous · sacrilegious · seize · separate · shepherd · siege · similar · simile · too · tragedy · tries · undoubtedly · until
+## VI. Words Often Misspelled
+accidentally · advice · affect · believe · benefit · challenge · coarse · course · criticize · deceive · definite · describe · despise · develop · disappoint · dissipate · duel · ecstasy · effect · embarrass · existence · fascinate · fiery · formerly · humorous · hypocrisy · immediately · impostor · incident · incidentally · latter · led · lose · marriage · mischief · murmur · necessary · occurred · opportunity · parallel · Philip · playwright · preceding · prejudice · principal · principle · privilege · pursue · repetition · rhyme · rhythm · ridiculous · sacrilegious · seize · separate · shepherd · siege · similar · simile · too · tragedy · tries · undoubtedly · until · villain
