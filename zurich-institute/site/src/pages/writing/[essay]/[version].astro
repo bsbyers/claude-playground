@@ -1,0 +1,24 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import EssayArticle from '../../../components/EssayArticle.astro';
+import { getEssays, type Essay, type EssayVersion } from '../../../lib/essays';
+
+// Every version keeps a permanent address: /writing/<essay>/v<n>/
+export const getStaticPaths = (async () => {
+  const essays = await getEssays();
+  return essays.flatMap((essay) =>
+    essay.versions.map((entry) => ({
+      params: { essay: essay.slug, version: `v${entry.data.version}` },
+      props: { essay, entry },
+    })),
+  );
+}) satisfies GetStaticPaths;
+
+const { essay, entry } = Astro.props as { essay: Essay; entry: EssayVersion };
+const d = entry.data;
+---
+
+<Base title={`${d.title} (version ${d.version})`} description={d.dek} type="article">
+  <EssayArticle essay={essay} entry={entry} />
+</Base>

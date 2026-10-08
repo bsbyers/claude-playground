@@ -1,0 +1,51 @@
+---
+import { tagline } from '../data/institute';
+const year = new Date().getFullYear();
+---
+
+<footer class="wrap site-footer">
+  <div class="cols">
+    <p class="tag">{tagline}</p>
+    <p class="meta">
+      Our writing is versioned. Every version stays online, so what we said and when stays on the
+      record.
+    </p>
+    <p class="meta links">
+      <a href="/rss.xml">RSS</a>
+      <span aria-hidden="true">·</span>
+      <span>© {year} Zurich Institute</span>
+    </p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    margin-top: clamp(4rem, 10vw, 8rem);
+    padding-block: 2rem 3rem;
+  }
+  .cols {
+    display: grid;
+    gap: 1rem 3rem;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.5rem;
+  }
+  @media (min-width: 860px) {
+    .cols {
+      grid-template-columns: var(--label) minmax(0, 28rem) 1fr;
+    }
+    .links {
+      justify-self: end;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .tag {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .links {
+    display: flex;
+    gap: 0.5rem;
+  }
+</style>

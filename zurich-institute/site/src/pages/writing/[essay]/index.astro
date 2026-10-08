@@ -1,0 +1,31 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import EssayArticle from '../../../components/EssayArticle.astro';
+import { getEssays, type Essay } from '../../../lib/essays';
+
+// The essay's main address always shows its latest version.
+export const getStaticPaths = (async () => {
+  const essays = await getEssays();
+  return essays.map((essay) => ({ params: { essay: essay.slug }, props: { essay } }));
+}) satisfies GetStaticPaths;
+
+const { essay } = Astro.props as { essay: Essay };
+const d = essay.latest.data;
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  alternativeHeadline: d.subtitle,
+  description: d.dek,
+  datePublished: essay.versions[essay.versions.length - 1].data.date.toISOString(),
+  dateModified: d.date.toISOString(),
+  version: String(d.version),
+  publisher: { '@type': 'Organization', name: 'Zurich Institute' },
+};
+---
+
+<Base title={d.title} description={d.dek} type="article" jsonLd={jsonLd}>
+  <EssayArticle essay={essay} entry={essay.latest} />
+</Base>

@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="Not found" description="This page does not exist.">
+  <div class="wrap nf">
+    <p class="label">404</p>
+    <h1>Nothing is here.</h1>
+    <p>The page may have moved. Every essay version keeps its address, so an old link to our writing should still work.</p>
+    <p class="meta"><a href="/">Return home</a> · <a href="/writing/">Writing</a></p>
+  </div>
+</Base>
+
+<style>
+  .nf {
+    padding-block: clamp(4rem, 12vw, 9rem);
+  }
+  h1 {
+    margin: 1rem 0 1.25rem;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 360;
+  }
+  p {
+    max-width: var(--measure);
+  }
+</style>

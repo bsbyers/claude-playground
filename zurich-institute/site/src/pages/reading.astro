@@ -1,0 +1,72 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const books = await getCollection('reading');
+---
+
+<Base title="Reading" description="Books and essays that have shaped the Zurich Institute's thinking.">
+  <div class="wrap">
+    <header class="intro">
+      <p class="label">Reading</p>
+      <h1>Works that shaped our thinking, with the ideas we took from each.</h1>
+    </header>
+
+    {
+      books.map((b) => (
+        <section class="row">
+          <p class="label">{b.data.author}</p>
+          <div>
+            <h2>
+              <cite>{b.data.title}</cite>
+              {b.data.year && <span class="year meta">{b.data.year}</span>}
+            </h2>
+            <ol class="ideas">
+              {b.data.ideas.map((idea) => (
+                <li>{idea}</li>
+              ))}
+            </ol>
+            {b.data.recommendedBy && <p class="meta">Recommended by {b.data.recommendedBy}</p>}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+
+<style>
+  .intro {
+    padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem);
+  }
+  .intro h1 {
+    margin-top: 1.25rem;
+    font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+    line-height: 1.12;
+    font-weight: 360;
+    letter-spacing: -0.02em;
+    max-width: 22ch;
+  }
+  h2 {
+    font-size: 1.75rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+  }
+  cite {
+    font-style: italic;
+  }
+  .ideas {
+    margin: 1.25rem 0 1.25rem;
+    padding-left: 1.4em;
+    max-width: var(--measure);
+  }
+  .ideas li {
+    margin-bottom: 0.6rem;
+  }
+  .ideas li::marker {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--ink-2);
+  }
+</style>

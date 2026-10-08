@@ -1,0 +1,41 @@
+---
+import Base from '../../layouts/Base.astro';
+import EssayList from '../../components/EssayList.astro';
+import { getEssays } from '../../lib/essays';
+
+const essays = await getEssays();
+---
+
+<Base title="Writing" description="Essays from the Zurich Institute. Every version stays online.">
+  <div class="wrap">
+    <header class="intro">
+      <p class="label">Writing</p>
+      <h1>Essays, published in versions.</h1>
+      <p class="prose note">
+        We treat essays as working arguments. Each revision gets a version number and a note on what
+        changed, and every earlier version keeps its own permanent address.
+      </p>
+    </header>
+    <section class="row" aria-label="Essays">
+      <p class="label">{essays.length} {essays.length === 1 ? 'essay' : 'essays'}</p>
+      <EssayList essays={essays} />
+    </section>
+  </div>
+</Base>
+
+<style>
+  .intro {
+    padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem);
+  }
+  .intro h1 {
+    margin: 1.25rem 0 1.25rem;
+    font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+    line-height: 1.12;
+    font-weight: 360;
+    letter-spacing: -0.02em;
+  }
+  .note {
+    color: var(--ink-2);
+    margin: 0;
+  }
+</style>

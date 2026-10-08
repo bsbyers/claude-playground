@@ -1,0 +1,66 @@
+---
+import { getEntries } from 'astro:content';
+import { type Essay, essayPath, formatDate, readingMinutes } from '../lib/essays';
+
+interface Props {
+  essays: Essay[];
+}
+const { essays } = Astro.props;
+
+const items = await Promise.all(
+  essays.map(async (e) => {
+    const authors = await getEntries(e.latest.data.authors.map((id) => ({ collection: 'people' as const, id })));
+    return { e, authors: authors.map((a) => a.data.name).join(', ') };
+  }),
+);
+---
+
+<ol class="essays">
+  {
+    items.map(({ e, authors }) => (
+      <li>
+        <a href={essayPath(e.slug)} class="title">
+          {e.latest.data.title}
+        </a>
+        {e.latest.data.subtitle && <p class="subtitle">{e.latest.data.subtitle}</p>}
+        <p class="dek">{e.latest.data.dek}</p>
+        <p class="meta">
+          {authors} · {formatDate(e.latest.data.date)} · Version {e.latest.data.version}
+          {e.latest.data.status === 'draft' && ' · Working draft'} · {readingMinutes(e.latest.body)} min read
+        </p>
+      </li>
+    ))
+  }
+</ol>
+
+<style>
+  .essays {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2.5rem;
+  }
+  .title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    line-height: 1.15;
+    text-decoration: none;
+    letter-spacing: -0.012em;
+  }
+  .title:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+  }
+  .subtitle {
+    margin: 0.25rem 0 0;
+    font-style: italic;
+    color: var(--ink-2);
+  }
+  .dek {
+    margin: 0.75rem 0 0.5rem;
+    max-width: var(--measure);
+  }
+  .meta {
+    margin: 0;
+  }
+</style>

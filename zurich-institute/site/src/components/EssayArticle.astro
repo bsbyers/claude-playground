@@ -1,0 +1,298 @@
+---
+import { getEntries, render } from 'astro:content';
+import {
+  type Essay,
+  type EssayVersion,
+  essayPath,
+  versionPath,
+  formatDate,
+  readingMinutes,
+  inlineMarkdown,
+} from '../lib/essays';
+
+interface Props {
+  essay: Essay;
+  entry: EssayVersion;
+}
+
+const { essay, entry } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const isLatest = d.version === essay.latest.data.version;
+
+const authors = await getEntries(d.authors.map((id) => ({ collection: 'people' as const, id })));
+const byline = authors.map((a) => a.data.name).join(', ');
+
+// "Brandon S. Byers" -> "Byers, B. S."
+const citeName = (full: string) => {
+  const parts = full.split(/\s+/);
+  const last = parts.pop();
+  return `${last}, ${parts.map((p) => `${p[0]}.`).join(' ')}`;
+};
+const permalink = new URL(versionPath(entry), Astro.site).toString();
+const citation = `${authors.map((a) => citeName(a.data.name)).join(', ')} (${d.date.getUTCFullYear()}). ${d.title}${
+  d.subtitle ? `: ${d.subtitle}` : ''
+}. Zurich Institute, version ${d.version}. ${permalink}`;
+---
+
+<article class="wrap essay">
+  {
+    !isLatest && (
+      <aside class="older" role="note">
+        <p>
+          You are reading version {d.version}, from {formatDate(d.date)}. The latest is version{' '}
+          {essay.latest.data.version}. <a href={essayPath(essay.slug)}>Read the latest version</a>
+        </p>
+      </aside>
+    )
+  }
+
+  <header class="head grid">
+    <p class="label side">
+      <span class="status">{d.status === 'draft' ? 'Working draft' : 'Published'}</span>
+      <br />Version {d.version}
+    </p>
+    <div>
+      <h1>{d.title}</h1>
+      {d.subtitle && <p class="subtitle">{d.subtitle}</p>}
+      <p class="dek">{d.dek}</p>
+      <p class="meta">
+        By {
+          authors.map((a, i) => (
+            <>
+              {i > 0 && ', '}
+              <a href={`/people/#${a.id}`}>{a.data.name}</a>
+            </>
+          ))
+        } · {formatDate(d.date)} · {readingMinutes(entry.body)} min read · <a href="#versions">
+          {essay.versions.length === 1 ? '1 version' : `${essay.versions.length} versions`}
+        </a>
+      </p>
+    </div>
+  </header>
+
+  {
+    d.summary.length > 0 && (
+      <section class="grid block" aria-labelledby="brief">
+        <h2 class="label side" id="brief">
+          The argument in brief
+        </h2>
+        <dl class="brief">
+          {d.summary.map((s) => (
+            <div>
+              <dt>{s.label}</dt>
+              <dd>{s.text}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+    )
+  }
+
+  <div class="grid block">
+    <span class="side" aria-hidden="true"></span>
+    <div class="body prose">
+      <Content />
+    </div>
+  </div>
+
+  {
+    d.references.length > 0 && (
+      <section class="grid block" aria-labelledby="references">
+        <h2 class="label side" id="references">
+          References
+        </h2>
+        <ol class="refs">
+          {d.references.map((r, i) => (
+            <li id={`ref-${i + 1}`} set:html={inlineMarkdown(r)} />
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  <section class="grid block" aria-labelledby="versions-label" id="versions">
+    <h2 class="label side" id="versions-label">Versions</h2>
+    <ol class="versions">
+      {
+        essay.versions.map((v) => (
+          <li class:list={{ current: v.data.version === d.version }}>
+            <p class="meta">
+              {v.data.version === d.version ? (
+                <strong>Version {v.data.version}</strong>
+              ) : (
+                <a href={versionPath(v)}>Version {v.data.version}</a>
+              )}{' '}
+              · {formatDate(v.data.date)}
+              {v.data.version === essay.latest.data.version && ' · Latest'}
+            </p>
+            <p class="change">{v.data.changes}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="grid block" aria-labelledby="cite">
+    <h2 class="label side" id="cite">Cite this version</h2>
+    <p class="citation">{citation}</p>
+  </section>
+</article>
+
+<style>
+  .essay {
+    padding-top: clamp(2.5rem, 7vw, 5rem);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.75rem 3rem;
+  }
+  @media (min-width: 860px) {
+    .grid {
+      grid-template-columns: var(--label) minmax(0, 1fr);
+    }
+  }
+  .block {
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+  }
+  .block:not(:has(.body)) {
+    border-top: 1px solid var(--rule);
+    padding-top: clamp(2rem, 5vw, 3rem);
+  }
+  .side {
+    padding-top: 0.35rem;
+    line-height: 1.8;
+  }
+  .older {
+    margin-bottom: 2.5rem;
+    padding: 0.9rem 1.1rem;
+    border-left: 2px solid var(--accent);
+    background: var(--tile);
+    font-family: var(--sans);
+    font-size: 0.9rem;
+  }
+  .older p {
+    margin: 0;
+  }
+  h1 {
+    font-size: clamp(2.3rem, 6vw, 4.2rem);
+    line-height: 1.04;
+    font-weight: 360;
+    letter-spacing: -0.024em;
+    max-width: 16ch;
+  }
+  .subtitle {
+    margin: 0.75rem 0 0;
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+    font-style: italic;
+    line-height: 1.25;
+    color: var(--ink-2);
+  }
+  .dek {
+    margin: 1.75rem 0 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.45;
+    max-width: var(--measure);
+  }
+  .brief {
+    margin: 0;
+    max-width: var(--measure);
+    display: grid;
+    gap: 1.1rem;
+  }
+  .brief dt {
+    font-family: var(--sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  .brief dd {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.55;
+  }
+
+  /* Essay body */
+  .body {
+    font-size: 1.1875rem;
+    line-height: 1.62;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+  }
+  .body :global(h2) {
+    font-size: 1.55rem;
+    line-height: 1.2;
+    margin: 3rem 0 1rem;
+  }
+  .body :global(h2:first-child) {
+    margin-top: 0;
+  }
+  .body :global(blockquote) {
+    margin: 1.75rem 0;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--accent);
+    font-style: italic;
+  }
+  .body :global(.cite) {
+    font-family: var(--sans);
+    font-size: 0.68em;
+    color: var(--ink-2);
+    white-space: nowrap;
+    vertical-align: 0.15em;
+  }
+  .body :global(.cite a) {
+    text-decoration: none;
+    color: inherit;
+  }
+  .body :global(.cite a:hover) {
+    color: var(--accent);
+  }
+
+  .refs {
+    margin: 0;
+    padding-left: 2.2em;
+    max-width: var(--measure);
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .refs li {
+    margin-bottom: 0.5rem;
+    padding: 0.1rem 0.25rem;
+    overflow-wrap: anywhere;
+  }
+  .refs li::marker {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--ink-2);
+  }
+  .refs li:target {
+    background: var(--tile);
+    outline: 1px solid var(--accent);
+  }
+  .versions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1.25rem;
+    max-width: var(--measure);
+  }
+  .versions p {
+    margin: 0;
+  }
+  .versions .change {
+    margin-top: 0.25rem;
+    font-size: 1rem;
+  }
+  .versions strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+  .citation {
+    max-width: var(--measure);
+    font-size: 0.95rem;
+    overflow-wrap: anywhere;
+    margin: 0;
+  }
+</style>

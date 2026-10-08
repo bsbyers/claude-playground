@@ -1,0 +1,31 @@
+---
+interface Props {
+  size?: 'normal' | 'large';
+}
+const { size = 'normal' } = Astro.props;
+---
+
+<span class:list={['wordmark', size]}><span class="mark" aria-hidden="true"></span>Zurich Institute</span>
+
+<style>
+  .wordmark {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 0.5em;
+    font-family: var(--serif);
+    font-size: 1.25rem;
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  .large {
+    font-size: 2rem;
+  }
+  .mark {
+    width: 0.5em;
+    height: 0.5em;
+    background: var(--accent);
+    flex: none;
+  }
+</style>

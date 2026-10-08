@@ -1,0 +1,109 @@
+---
+import Base from '../layouts/Base.astro';
+import EssayList from '../components/EssayList.astro';
+import { getEssays } from '../lib/essays';
+import { vision, mission, method, tagline, name } from '../data/institute';
+
+const essays = (await getEssays()).slice(0, 3);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name,
+  url: Astro.site?.toString(),
+  logo: new URL('/apple-touch-icon.png', Astro.site).toString(),
+  description: mission,
+};
+---
+
+<Base description={tagline} jsonLd={jsonLd}>
+  <section class="wrap hero">
+    <h1>{vision}</h1>
+  </section>
+
+  <div class="wrap">
+    <section class="row" aria-labelledby="mission">
+      <h2 class="label" id="mission">Mission</h2>
+      <div>
+        <p class="lede">{mission}</p>
+        <p class="meta"><a href="/about/">Read our principles</a></p>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="method">
+      <h2 class="label" id="method">Method</h2>
+      <ol class="method">
+        {
+          method.map((m, i) => (
+            <li>
+              <span class="num meta">0{i + 1}</span>
+              <h3>{m.title}</h3>
+              <p>{m.text}</p>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="row" aria-labelledby="writing">
+      <h2 class="label" id="writing">Writing</h2>
+      <div>
+        <EssayList essays={essays} />
+        <p class="meta more"><a href="/writing/">All writing</a></p>
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="people">
+      <h2 class="label" id="people">People</h2>
+      <div>
+        <p class="prose">
+          Six engineers, architects, scientists, and founders working across research and industry,
+          from building heritage and circular construction to diagnostics, spacecraft, and applied AI.
+        </p>
+        <p class="meta"><a href="/people/">Meet the founders</a></p>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .hero {
+    padding-block: clamp(4rem, 12vw, 9rem) clamp(3rem, 8vw, 6rem);
+  }
+  .hero h1 {
+    font-size: clamp(2.1rem, 5.4vw, 4.4rem);
+    line-height: 1.06;
+    font-weight: 360;
+    letter-spacing: -0.022em;
+    max-width: 19ch;
+  }
+  .method {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2rem;
+  }
+  @media (min-width: 700px) {
+    .method {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+  }
+  .method h3 {
+    font-size: 1.6rem;
+    margin: 0.4rem 0 0.5rem;
+  }
+  .method p {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 1.05rem;
+  }
+  .num {
+    display: block;
+    border-top: 1px solid var(--ink);
+    padding-top: 0.6rem;
+  }
+  .more {
+    margin-top: 2.5rem;
+  }
+</style>

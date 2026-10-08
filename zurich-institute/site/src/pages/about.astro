@@ -1,0 +1,153 @@
+---
+import Base from '../layouts/Base.astro';
+import { vision, mission, why, principles, method, glossary, openQuestions } from '../data/institute';
+
+const roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
+---
+
+<Base title="About" description={mission}>
+  <div class="wrap">
+    <header class="intro">
+      <p class="label">About</p>
+      <h1>{mission}</h1>
+    </header>
+
+    <section class="row" aria-labelledby="vision">
+      <h2 class="label" id="vision">Vision</h2>
+      <p class="lede">{vision}</p>
+    </section>
+
+    <section class="row" aria-labelledby="why">
+      <h2 class="label" id="why">Why we exist</h2>
+      <div class="prose">
+        {why.map((p) => <p>{p}</p>)}
+      </div>
+    </section>
+
+    <section class="row" aria-labelledby="principles">
+      <h2 class="label" id="principles">Principles</h2>
+      <ol class="principles">
+        {
+          principles.map((p, i) => (
+            <li>
+              <span class="num meta">{roman[i]}</span>
+              <div>
+                <h3>{p.title}</h3>
+                <p>{p.text}</p>
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </section>
+
+    <section class="row" aria-labelledby="method">
+      <h2 class="label" id="method">Method</h2>
+      <dl class="pairs">
+        {
+          method.map((m) => (
+            <div>
+              <dt>{m.title}</dt>
+              <dd>{m.text}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="row" aria-labelledby="terms">
+      <h2 class="label" id="terms">Terms</h2>
+      <dl class="pairs">
+        {
+          glossary.map((g) => (
+            <div>
+              <dt>{g.term}</dt>
+              <dd>{g.text}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </section>
+
+    <section class="row" aria-labelledby="questions">
+      <h2 class="label" id="questions">Open questions</h2>
+      <div class="prose">
+        <p class="note">Questions we are still working through, and expect to argue about in print.</p>
+        <ul class="questions">
+          {openQuestions.map((q) => <li>{q}</li>)}
+        </ul>
+      </div>
+    </section>
+  </div>
+</Base>
+
+<style>
+  .intro {
+    padding-block: clamp(3rem, 9vw, 6rem) clamp(2.5rem, 6vw, 4rem);
+  }
+  .intro h1 {
+    margin-top: 1.25rem;
+    font-size: clamp(1.9rem, 4.2vw, 3.2rem);
+    line-height: 1.12;
+    font-weight: 360;
+    letter-spacing: -0.02em;
+    max-width: 24ch;
+  }
+  .principles {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 2.25rem;
+    max-width: 44rem;
+  }
+  .principles li {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 0 1rem;
+  }
+  .principles .num {
+    padding-top: 0.45rem;
+  }
+  .principles h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .principles p {
+    margin: 0;
+  }
+  .pairs {
+    margin: 0;
+    display: grid;
+    gap: 1.25rem;
+    max-width: 44rem;
+  }
+  .pairs > div {
+    display: grid;
+    gap: 0.25rem 1.5rem;
+  }
+  @media (min-width: 600px) {
+    .pairs > div {
+      grid-template-columns: 9rem minmax(0, 1fr);
+    }
+  }
+  dt {
+    font-style: italic;
+  }
+  dd {
+    margin: 0;
+  }
+  .note {
+    color: var(--ink-2);
+  }
+  .questions {
+    margin: 0;
+    padding-left: 1.1em;
+  }
+  .questions li {
+    margin-bottom: 0.6rem;
+  }
+  .questions li::marker {
+    color: var(--accent);
+  }
+</style>
