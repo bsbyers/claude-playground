@@ -7,7 +7,10 @@
     "role": "Co-founder and CEO, Belidor",
     "bio": "Marc Apicella is co-founder and CEO of Belidor, a construction technology company building AI tools for preconstruction teams, beginning with bid leveling. He holds a Master in Design Engineering from Harvard and trained in economics and experimental psychology. His path runs through Wall Street, a Booking.com company, research on entrepreneurial ideation at Columbia University, and applied AI product work on recommendation systems at DeepMind.",
     "links": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/marcapicella/" }
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/marcapicella/"
+      }
     ]
   },
   {
@@ -18,8 +21,18 @@
     "role": "Postdoctoral researcher, Construction Heritage and Preservation, ETH Zurich",
     "bio": "Matthias Brenner is an architect and postdoctoral researcher at the Chair of Construction Heritage and Preservation at ETH Zurich, where he also coordinates the MAS and CAS programs. His doctoral project, High-Tech for High-Tech, used reverse engineering and digital fabrication, including wire arc additive manufacturing, to make replacement parts for 1980s high-tech facades. He studied architecture in Munich, Rome, and Toronto, and is a co-author of High-Tech Heritage: (Im)permanence of Innovative Architecture (Birkhäuser, 2024).",
     "links": [
-      { "label": "ETH Zurich", "url": "https://www.langenberg.arch.ethz.ch/team-en/matthias-brenner/?lang=en" },
-      { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=9zNfYQwAAAAJ" }
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/matthiasbrenner/"
+      },
+      {
+        "label": "ETH Zurich",
+        "url": "https://www.langenberg.arch.ethz.ch/team-en/matthias-brenner/?lang=en"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=9zNfYQwAAAAJ"
+      }
     ]
   },
   {
@@ -30,9 +43,18 @@
     "role": "Postdoctoral researcher, Circular Engineering for Architecture, ETH Zurich",
     "bio": "Brandon S. Byers is a postdoctoral researcher at the Chair of Circular Engineering for Architecture at ETH Zurich. His research uses building informatics and decentralized data to track reused building components, including material and digital product passports. He holds a BS in civil engineering from Georgia Tech, an MS from Stanford, and a PhD from ETH Zurich. Before research he was a structural engineer at AECOM on dams and hydraulic structures. He writes on agency, property, and science policy.",
     "links": [
-      { "label": "ORCID", "url": "https://orcid.org/0000-0002-8622-8529" },
-      { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=7ksucksAAAAJ" },
-      { "label": "Medium", "url": "https://medium.com/@bsquared215" }
+      {
+        "label": "ORCID",
+        "url": "https://orcid.org/0000-0002-8622-8529"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=7ksucksAAAAJ"
+      },
+      {
+        "label": "Medium",
+        "url": "https://medium.com/@bsquared215"
+      }
     ]
   },
   {
@@ -43,7 +65,10 @@
     "role": "Analysis engineer, Beyond Gravity",
     "bio": "Lucas Froissart is an analysis engineer at Beyond Gravity in Zurich, working on satellites and launcher fairings. He studied mechanical and space engineering at EPFL. During his master's degree he designed a mechanism for the Japan Aerospace Exploration Agency to deliver exploration robots into lunar caves, validated through hundreds of drop tests and presented at the 33rd ISTS in 2022. He proposed the Institute's method: predict, project, provoke.",
     "links": [
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/lucas-froissart/" }
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/lucas-froissart/"
+      }
     ]
   },
   {
@@ -54,8 +79,14 @@
     "role": "Bioengineer, diagnostics and microfluidics",
     "bio": "Jake Lesinski is a bioengineer working on diagnostics, microfluidics, and biosensing. He earned his PhD at the Institute for Chemical and Bioengineering at ETH Zurich, where his research produced faster and more sensitive CRISPR-Cas assays and paper-based electrochemical platforms for point-of-care testing. He previously completed an MS in biomedical engineering at Cal Poly, modeling droplet motion driven by electrowetting. He now works at Checktor Biosciences.",
     "links": [
-      { "label": "Google Scholar", "url": "https://scholar.google.com/citations?user=LE0pUuQAAAAJ" },
-      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/jake-lesinski-phd-0b7139172/" }
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/jake-lesinski-phd-0b7139172/"
+      },
+      {
+        "label": "Google Scholar",
+        "url": "https://scholar.google.com/citations?user=LE0pUuQAAAAJ"
+      }
     ]
   },
   {
@@ -66,7 +97,10 @@
     "role": "Head of AI Solutions, TwinKnowledge",
     "bio": "Luke Reeve leads AI solutions at TwinKnowledge, which builds project intelligence for the architecture, engineering, construction, and operations industry, developing AI agents that automate client workflows. He practiced as a structural engineer at Uzun+Case and studied at the Harvard Graduate School of Design, researching how AI could change the way people work with information. He has also worked on Open Zoning, an open-data nonprofit effort to make zoning codes accessible nationwide.",
     "links": [
-      { "label": "Website", "url": "https://www.lukereeve.com/" }
+      {
+        "label": "Website",
+        "url": "https://www.lukereeve.com/"
+      }
     ]
   }
 ]

@@ -78,8 +78,17 @@ const people = (await getCollection('people')).sort((a, b) => a.data.order - b.d
     width: 100%;
     max-width: 22rem;
     margin-bottom: 1.25rem;
-    background: var(--tile);
+    background: var(--accent-soft);
     object-fit: cover;
+  }
+  @media (max-width: 639px) {
+    .tile,
+    img {
+      max-width: 9rem;
+    }
+    .tile span {
+      font-size: 2.5rem;
+    }
   }
   .tile {
     display: flex;
@@ -91,7 +100,7 @@ const people = (await getCollection('people')).sort((a, b) => a.data.order - b.d
     line-height: 1;
     font-weight: 330;
     letter-spacing: -0.02em;
-    color: var(--ink-2);
+    color: var(--accent);
   }
   h2 {
     font-size: 1.6rem;

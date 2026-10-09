@@ -11,6 +11,36 @@ export const vision =
 export const mission =
   'The Zurich Institute researches, designs, and advocates for technologies and institutions that restore agency and capability at the community scale.';
 
+export const concerns = [
+  {
+    title: 'Choice by default',
+    text: 'As AI makes production cheap, everyday decisions move into systems people cannot inspect or take back. Agency fades from disuse, not force.',
+  },
+  {
+    title: 'Leverage pooling at the top',
+    text: 'AI could let a ten-person firm or a town do what once took a corporation. By default, the gains go to a few platforms instead.',
+  },
+  {
+    title: 'Institutions built for the old scarcity',
+    text: 'Generating text is now cheap and judging it is not: about half of new web articles are AI-written. Universities and intellectual property law still reward volume and credentials.',
+  },
+];
+
+export const contributions = [
+  {
+    title: 'Evidence from physical industries',
+    text: 'We work in construction, heritage, diagnostics, spacecraft, and AI products. We test claims about agency where software meets the physical world.',
+  },
+  {
+    title: 'Instruments, not only arguments',
+    text: 'Proposals written so someone can adopt them, starting with rules for delegating decisions to AI agents: bounded, revocable, never a condition of access.',
+  },
+  {
+    title: 'Ourselves as the pilot',
+    text: 'Six people with day jobs, using AI to produce institute-grade work and publishing every version. If it works for us, it is a model for small expert groups elsewhere.',
+  },
+];
+
 export const why = [
   'The cost of producing ideas, text, and designs is falling toward zero. The cost of knowing which of them matter, and of acting on them, is not. That gap is where agency lives, and it is where our institutions are weakest.',
   'Universities reward volume over risk. Global firms try to solve local problems they do not understand. Software increasingly makes our choices by default, and makes them hard to take back. None of this requires bad intent; it only requires that nobody design against it.',

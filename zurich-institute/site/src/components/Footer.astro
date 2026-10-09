@@ -3,8 +3,8 @@ import { tagline } from '../data/institute';
 const year = new Date().getFullYear();
 ---
 
-<footer class="wrap site-footer">
-  <div class="cols">
+<footer class="site-footer">
+  <div class="wrap cols">
     <p class="tag">{tagline}</p>
     <p class="meta">
       Our writing is versioned. Every version stays online, so what we said and when stays on the
@@ -21,13 +21,24 @@ const year = new Date().getFullYear();
 <style>
   .site-footer {
     margin-top: clamp(4rem, 10vw, 8rem);
-    padding-block: 2rem 3rem;
+    padding-block: 2.5rem 3rem;
+    background: var(--band);
+    color: var(--band-ink);
   }
   .cols {
     display: grid;
     gap: 1rem 3rem;
-    border-top: 1px solid var(--rule);
-    padding-top: 1.5rem;
+  }
+  .site-footer .meta {
+    color: var(--band-ink-2);
+  }
+  .site-footer a {
+    color: var(--band-ink);
+    text-decoration-color: var(--band-ink-2);
+  }
+  .site-footer a:hover {
+    color: var(--band-ink);
+    text-decoration-color: var(--band-ink);
   }
   @media (min-width: 860px) {
     .cols {

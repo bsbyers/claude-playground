@@ -1,5 +1,5 @@
 /* Zurich Institute: design tokens and base styles.
-   Swiss grid, book typography, one accent used sparingly. */
+   Swiss grid, book typography, Zurich blue as the accent. */
 
 :root {
   --paper: #fafaf7;
@@ -7,8 +7,13 @@
   --ink-2: #5d5c57;
   --rule: #e2e0d8;
   --tile: #efede6;
-  --accent: #b3261e;
-  --accent-ink: #fafaf7;
+  /* Zurich blue: the canton's colour, used for labels, numerals, links and bands */
+  --accent: #1f4e8c;
+  --accent-ink: #ffffff;
+  --accent-soft: #e9eff7;
+  --band: #1f4e8c;
+  --band-ink: #f2f5fa;
+  --band-ink-2: #b9c9e0;
 
   --serif: 'Newsreader Variable', 'Iowan Old Style', Georgia, serif;
   --sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -28,8 +33,12 @@
     --ink-2: #a19f98;
     --rule: #2c2b28;
     --tile: #1d1c1a;
-    --accent: #e3735e;
-    --accent-ink: #121211;
+    --accent: #8db4ea;
+    --accent-ink: #0d1626;
+    --accent-soft: #172131;
+    --band: #15243a;
+    --band-ink: #e3eaf5;
+    --band-ink-2: #9fb3d1;
     color-scheme: dark;
   }
 }
@@ -40,8 +49,12 @@
   --ink-2: #a19f98;
   --rule: #2c2b28;
   --tile: #1d1c1a;
-  --accent: #e3735e;
-  --accent-ink: #121211;
+  --accent: #8db4ea;
+  --accent-ink: #0d1626;
+  --accent-soft: #172131;
+  --band: #15243a;
+  --band-ink: #e3eaf5;
+  --band-ink-2: #9fb3d1;
   color-scheme: dark;
 }
 
@@ -80,11 +93,12 @@ a {
   text-decoration-line: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.18em;
-  text-decoration-color: var(--rule);
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
   transition: text-decoration-color 120ms ease, color 120ms ease;
 }
 
 a:hover {
+  color: var(--accent);
   text-decoration-color: var(--accent);
 }
 
@@ -143,7 +157,7 @@ p {
   font-weight: 500;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--ink-2);
+  color: var(--accent);
 }
 
 .meta {
@@ -200,4 +214,37 @@ p {
   * {
     transition: none !important;
   }
+}
+
+/* A full-width tinted band; put a .wrap inside */
+.band-soft {
+  background: var(--accent-soft);
+}
+
+.band-soft .row {
+  border-top: 0;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+figure {
+  margin: 0;
+}
+
+figure picture,
+figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  font-family: var(--sans);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--ink-2);
+  margin-top: 0.75rem;
+  max-width: var(--measure);
 }

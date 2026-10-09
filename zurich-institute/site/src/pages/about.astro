@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import ConcernContribution from '../components/ConcernContribution.astro';
 import { vision, mission, why, principles, method, glossary, openQuestions } from '../data/institute';
 
 const roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
@@ -15,6 +16,10 @@ const roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
     <section class="row" aria-labelledby="vision">
       <h2 class="label" id="vision">Vision</h2>
       <p class="lede">{vision}</p>
+    </section>
+
+    <section class="row cc-row">
+      <ConcernContribution />
     </section>
 
     <section class="row" aria-labelledby="why">
@@ -108,6 +113,11 @@ const roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
   }
   .principles .num {
     padding-top: 0.45rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .cc-row {
+    display: block;
   }
   .principles h3 {
     font-size: 1.5rem;
@@ -133,6 +143,7 @@ const roman = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X'];
   }
   dt {
     font-style: italic;
+    color: var(--accent);
   }
   dd {
     margin: 0;

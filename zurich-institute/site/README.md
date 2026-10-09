@@ -55,3 +55,10 @@ The domain is registered on Cloudflare, so Pages is the simplest host.
 4. Set the production branch to the branch you want live (usually `main`). Every other branch gets its own preview URL.
 
 `public/_headers` sets security headers and long cache lifetimes for hashed assets; Cloudflare Pages applies it automatically.
+
+## Image credits
+
+Both images are from the Library of Congress Prints and Photographs Division, marked "No known restrictions on publication":
+
+- `public/images/zurich-1890s-*`: *Zürich. Bahnhofplatz & Polytechnikum*, photochrom, between 1890 and 1900 ([LC-DIG-ppmsca-52873](https://www.loc.gov/pictures/item/93506994/)).
+- `public/images/wilde-sarony-1882-*`: Napoleon Sarony, *Oscar Wilde*, No. 18, 1882 ([LC-DIG-ppmsca-13274](https://www.loc.gov/pictures/item/98519710/)).

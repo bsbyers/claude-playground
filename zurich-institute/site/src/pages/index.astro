@@ -1,8 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import EssayList from '../components/EssayList.astro';
+import ConcernContribution from '../components/ConcernContribution.astro';
+import Figure from '../components/Figure.astro';
 import { getEssays } from '../lib/essays';
-import { vision, mission, method, tagline, name } from '../data/institute';
+import { mission, method, tagline, name } from '../data/institute';
 
 const essays = (await getEssays()).slice(0, 3);
 
@@ -18,16 +20,43 @@ const jsonLd = {
 
 <Base description={tagline} jsonLd={jsonLd}>
   <section class="wrap hero">
-    <h1>{vision}</h1>
+    <h1>
+      The Zurich Institute envisions a <span class="accent">high-agency society</span> with the knowledge
+      and technology to pursue prosperity, meaning, and abundance.
+    </h1>
   </section>
 
   <div class="wrap">
-    <section class="row" aria-labelledby="mission">
+    <Figure
+      class="lead-image"
+      stem="zurich-1890s"
+      widths={[640, 1024]}
+      width={1024}
+      height={772}
+      sizes="(min-width: 76rem) 1024px, 100vw"
+      loading="eager"
+      alt="Colour photochrom of Zurich's Bahnhofplatz in the 1890s: the railway station on the left, a fountain and pedestrians in the square, and the long Polytechnikum building on the hill behind."
+    >
+      Zurich, Bahnhofplatz and the Polytechnikum, 1890s. The building on the hill is now ETH Zurich's
+      main building. Photochrom, a colour process developed in Zurich. <a
+        href="https://www.loc.gov/pictures/item/93506994/">Library of Congress</a
+      >, no known restrictions.
+    </Figure>
+  </div>
+
+  <section class="band-soft" aria-labelledby="mission">
+    <div class="wrap row">
       <h2 class="label" id="mission">Mission</h2>
       <div>
         <p class="lede">{mission}</p>
         <p class="meta"><a href="/about/">Read our principles</a></p>
       </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <section class="row cc-row">
+      <ConcernContribution />
     </section>
 
     <section class="row" aria-labelledby="method">
@@ -68,7 +97,7 @@ const jsonLd = {
 
 <style>
   .hero {
-    padding-block: clamp(4rem, 12vw, 9rem) clamp(3rem, 8vw, 6rem);
+    padding-block: clamp(3.5rem, 10vw, 7.5rem) clamp(2.5rem, 6vw, 4.5rem);
   }
   .hero h1 {
     font-size: clamp(2.1rem, 5.4vw, 4.4rem);
@@ -76,6 +105,16 @@ const jsonLd = {
     font-weight: 360;
     letter-spacing: -0.022em;
     max-width: 19ch;
+  }
+  .hero .accent {
+    font-style: italic;
+  }
+  .wrap :global(.lead-image) {
+    margin-bottom: clamp(3rem, 8vw, 5rem);
+  }
+  .cc-row {
+    display: block;
+    border-top: 0;
   }
   .method {
     list-style: none;
@@ -100,8 +139,10 @@ const jsonLd = {
   }
   .num {
     display: block;
-    border-top: 1px solid var(--ink);
+    border-top: 2px solid var(--accent);
     padding-top: 0.6rem;
+    color: var(--accent);
+    font-weight: 600;
   }
   .more {
     margin-top: 2.5rem;

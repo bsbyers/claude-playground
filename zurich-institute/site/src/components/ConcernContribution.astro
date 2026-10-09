@@ -1,0 +1,65 @@
+---
+import { concerns, contributions } from '../data/institute';
+---
+
+<div class="cc">
+  <section aria-labelledby="concern">
+    <h2 class="label" id="concern">Our concern</h2>
+    <ol>
+      {
+        concerns.map((c) => (
+          <li>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+  <section aria-labelledby="contribution">
+    <h2 class="label" id="contribution">Our contribution</h2>
+    <ol>
+      {
+        contributions.map((c) => (
+          <li>
+            <h3>{c.title}</h3>
+            <p>{c.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+</div>
+
+<style>
+  .cc {
+    display: grid;
+    gap: 3rem;
+  }
+  @media (min-width: 760px) {
+    .cc {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4rem;
+    }
+  }
+  ol {
+    list-style: none;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    display: grid;
+    gap: 1.5rem;
+  }
+  li {
+    border-top: 2px solid var(--accent);
+    padding-top: 0.75rem;
+  }
+  h3 {
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+  }
+  p {
+    margin: 0;
+    font-size: 1.02rem;
+    color: var(--ink-2);
+  }
+</style>
