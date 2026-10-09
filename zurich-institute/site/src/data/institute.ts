@@ -13,16 +13,16 @@ export const mission =
 
 export const concerns = [
   {
-    title: 'Choice by default',
-    text: 'As AI makes production cheap, everyday decisions move into systems people cannot inspect or take back. Agency fades from disuse, not force.',
+    title: 'Work without a plan',
+    text: 'AI is changing who does knowledge work and how. Schools and careers still prepare people to be employees of large organizations, just as small, self-directed teams become viable.',
   },
   {
     title: 'Leverage pooling at the top',
-    text: 'AI could let a ten-person firm or a town do what once took a corporation. By default, the gains go to a few platforms instead.',
+    text: 'AI could let a ten-person firm or a town do what once took a corporation. By default, the gains go to a few platforms and global firms that do not understand local problems.',
   },
   {
-    title: 'Institutions built for the old scarcity',
-    text: 'Generating text is now cheap and judging it is not: about half of new web articles are AI-written. Universities and intellectual property law still reward volume and credentials.',
+    title: 'Institutions falling behind',
+    text: 'Universities reward volume and credentials over risk and creativity, and the knowledge institutions carry between generations is not being renewed fast enough.',
   },
 ];
 
@@ -33,17 +33,17 @@ export const contributions = [
   },
   {
     title: 'Instruments, not only arguments',
-    text: 'Proposals written so someone can adopt them, starting with rules for delegating decisions to AI agents: bounded, revocable, never a condition of access.',
+    text: 'Proposals, pilots, and open tools written so that someone can adopt them, not commentary alone.',
   },
   {
-    title: 'Ourselves as the pilot',
-    text: 'Six people with day jobs, using AI to produce institute-grade work and publishing every version. If it works for us, it is a model for small expert groups elsewhere.',
+    title: 'A bridge between Zurich and the US',
+    text: 'Founders on both sides of the Atlantic, carrying ideas and pilots between two traditions of enterprise, regulation, and public institutions.',
   },
 ];
 
 export const why = [
   'The cost of producing ideas, text, and designs is falling toward zero. The cost of knowing which of them matter, and of acting on them, is not. That gap is where agency lives, and it is where our institutions are weakest.',
-  'Universities reward volume over risk. Global firms try to solve local problems they do not understand. Software increasingly makes our choices by default, and makes them hard to take back. None of this requires bad intent; it only requires that nobody design against it.',
+  'Universities reward volume over risk. Global firms try to solve local problems they do not understand. Education still trains people for jobs inside large organizations. None of this requires bad intent; it only requires that nobody design against it.',
   'We are six engineers, architects, scientists, and founders working across research and industry. We think the response is not to slow the machines but to build the tools and institutions that put capability back where people live and work.',
 ];
 
@@ -63,10 +63,6 @@ export const principles = [
   {
     title: 'Capability over centralization',
     text: 'We favor tools, markets, and institutions that give small teams and local operators the leverage once reserved for the largest firms, without a giant intermediary in the middle. Decentralization is a design choice, and it has to scale: what works for one person should work for a town and connect across regions.',
-  },
-  {
-    title: 'Agency can be lent, never sold',
-    text: 'Delegating choices to software is useful, and there will be more of it. Delegation should be bounded, revocable, and never a condition of access to essential services. A system that decides for you by default, and makes the decision hard to take back, is spending your agency.',
   },
   {
     title: 'Preserve to progress',

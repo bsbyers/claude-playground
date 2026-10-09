@@ -44,6 +44,10 @@
     "bio": "Brandon S. Byers is a postdoctoral researcher at the Chair of Circular Engineering for Architecture at ETH Zurich. His research uses building informatics and decentralized data to track reused building components, including material and digital product passports. He holds a BS in civil engineering from Georgia Tech, an MS from Stanford, and a PhD from ETH Zurich. Before research he was a structural engineer at AECOM on dams and hydraulic structures. He writes on agency, property, and science policy.",
     "links": [
       {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/brandon-s-byers/"
+      },
+      {
         "label": "ORCID",
         "url": "https://orcid.org/0000-0002-8622-8529"
       },
@@ -97,6 +101,10 @@
     "role": "Head of AI Solutions, TwinKnowledge",
     "bio": "Luke Reeve leads AI solutions at TwinKnowledge, which builds project intelligence for the architecture, engineering, construction, and operations industry, developing AI agents that automate client workflows. He practiced as a structural engineer at Uzun+Case and studied at the Harvard Graduate School of Design, researching how AI could change the way people work with information. He has also worked on Open Zoning, an open-data nonprofit effort to make zoning codes accessible nationwide.",
     "links": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/luke-reeve-65022b153/"
+      },
       {
         "label": "Website",
         "url": "https://www.lukereeve.com/"
